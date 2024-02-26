@@ -1,0 +1,37 @@
+.base-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--color-black);
+}
+
+.base-heading--xl {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.base-heading--lg {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.base-heading--md {
+  font-size: 15px;
+  line-height: 19px;
+}
+
+.base-heading--sm {
+  font-size: 12px;
+  line-height: 15px;
+  kerning: 2.4px;
+}
+
+.base-heading--bold {
+  font-weight: bold;
+}
+
+.base-heading--medium {
+  font-weight: 500;
+}
+
+.base-heading--normal {
+  font-weight: normal;
+}
