@@ -1,0 +1,26 @@
+.base-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--color-dark-grey);
+}
+
+.base-text--lg {
+  font-size: 13px;
+  line-height: 23px;
+}
+
+.base-text--md {
+  font-size: 12px;
+  line-height: 19px;
+}
+
+.base-text--bold {
+  font-weight: bold;
+}
+
+.base-text--medium {
+  font-weight: 500;
+}
+
+.base-text--normal {
+  font-weight: normal;
+}
