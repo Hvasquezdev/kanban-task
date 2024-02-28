@@ -1,2 +1,6 @@
 @import url('https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css');
 @import './assets/css/colors.css';
+
+* {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}

@@ -1,0 +1,79 @@
+.base-select .base-select__control {
+  border-color: var(--color-medium-grey-o-25);
+  min-height: 40px;
+  box-shadow: none;
+}
+
+.base-select .base-select__control--menu-is-open,
+.base-select .base-select__control--is-focused,
+.base-select .base-select__control:hover {
+  border-color: var(--color-main-purple);
+}
+
+.base-select .base-select__value-container {
+  padding: 5px 16px;
+}
+
+.base-select .base-select__placeholder,
+.base-select .base-select__single-value {
+  font-size: 13px;
+  line-height: 20px;
+  text-align: left;
+  color: var(--color-black);
+  margin: 0;
+}
+
+.base-select .base-select__indicator-separator {
+  display: none;
+}
+
+.base-select .base-select__dropdown-indicator {
+  cursor: pointer;
+  height: 100%;
+  width: 36px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg width='11' height='8' viewBox='0 0 11 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.79834 1.54858L5.49682 6.24707L10.1953 1.54858' stroke='%23635FC7' stroke-width='2'/%3E%3C/svg%3E%0A");
+}
+
+.base-select .base-select__dropdown-indicator svg {
+  display: none;
+}
+
+.base-select .base-select__control--menu-is-open .base-select__dropdown-indicator {
+  transform: rotate(180deg);
+}
+
+.base-select .base-select__menu {
+  border: 1px solid var(--color-medium-grey-o-25);
+  box-shadow: none;
+  border-radius: 8px;
+}
+
+.base-select .base-select__menu-list {
+  padding: 16px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.base-select .base-select__option {
+  padding: 0 8px;
+  color: var(--color-medium-grey);
+  font-size: 13px;
+  line-height: 23px;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.base-select .base-select__option:hover,
+.base-select .base-select__option--is-focused,
+.base-select .base-select__option--is-selected {
+  background-color: var(--color-light-grey);
+}
+
+.base-select .base-select__option.base-select__option--is-selected {
+  background-color: var(--color-main-purple-o-25);
+  color: var(--color-black);
+}
