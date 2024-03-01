@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './App.css';
 import BaseSelect from './components/BaseSelect';
 import { Option } from './components/BaseSelect/BaseSelect';
 import BaseTextField from './components/BaseTextField';
@@ -29,16 +28,15 @@ function App() {
   ];
 
   return (
-    <>
+    <div>
       <BaseMenu className="menu-preview" options={menuOptions} />
-
       <BaseSelect options={options} value={option} onSelect={setOption} />
 
       <form>
         <BaseTextField onChange={setText} value={text} label="Text Field" required placeholder="e.g Make cofee" />
         <button type="submit">Submit</button>
       </form>
-    </>
+    </div>
   );
 }
 
