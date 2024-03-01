@@ -1,0 +1,19 @@
+.base-card {
+  background-color: var(--color-white);
+  padding: 0;
+  width: 100%;
+}
+
+.base-card--box-shadow {
+  box-shadow: 0 4px 6px 0 var(--color-main-purple-o-10);
+}
+
+.base-card--lg {
+  padding: 32px;
+  border-radius: 6px;
+}
+
+.base-card--sm {
+  padding: 24px 16px;
+  border-radius: 8px;
+}
