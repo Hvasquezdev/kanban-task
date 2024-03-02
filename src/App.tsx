@@ -4,10 +4,12 @@ import { Option } from './components/BaseSelect/BaseSelect';
 import BaseTextField from './components/BaseTextField';
 import BaseMenu from './components/BaseMenu';
 import { MenuOptionColor } from './components/BaseMenu/BaseMenu';
+import BaseCheckbox from './components/BaseCheckbox';
 
 function App() {
   const [option, setOption] = useState<Option>();
   const [text, setText] = useState('');
+  const [isChecked, setIsChecked] = useState(false);
 
   const options = [
     { value: 'chocolate', label: 'Chocolate' },
@@ -31,6 +33,7 @@ function App() {
     <div>
       <BaseMenu className="menu-preview" options={menuOptions} />
       <BaseSelect options={options} value={option} onSelect={setOption} />
+      <BaseCheckbox value={isChecked} label="Hovered" onChange={setIsChecked} />
 
       <form>
         <BaseTextField onChange={setText} value={text} label="Text Field" required placeholder="e.g Make cofee" />
