@@ -5,11 +5,14 @@ import BaseTextField from './components/BaseTextField';
 import BaseMenu from './components/BaseMenu';
 import { MenuOptionColor } from './components/BaseMenu/BaseMenu';
 import BaseCheckbox from './components/BaseCheckbox';
+import BaseModal from './components/BaseModal';
+import BaseButton from './components/BaseButton';
 
 function App() {
   const [option, setOption] = useState<Option>();
   const [text, setText] = useState('');
   const [isChecked, setIsChecked] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const options = [
     { value: 'chocolate', label: 'Chocolate' },
@@ -39,6 +42,10 @@ function App() {
         <BaseTextField onChange={setText} value={text} label="Text Field" required placeholder="e.g Make cofee" />
         <button type="submit">Submit</button>
       </form>
+      <BaseModal isOpen={isOpen} renderHeader={() => <h1>Header Testing</h1>} onClose={setIsOpen}>
+        <p>Modal Content</p>
+      </BaseModal>
+      <BaseButton onClick={() => setIsOpen(!isOpen)}>Open Test Modal</BaseButton>
     </div>
   );
 }
