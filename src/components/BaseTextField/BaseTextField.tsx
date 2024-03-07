@@ -38,7 +38,7 @@ export default function BaseTextField({
   }
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
-    const inputValue = event.target.value.trim();
+    const inputValue = event.target.value;
     onChange?.(inputValue);
     showInvalidState(inputValue);
   }

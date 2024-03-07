@@ -1,0 +1,59 @@
+.base-textarea {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  width: 100%;
+}
+
+.base-textarea__body {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.base-textarea__element,
+.base-textarea__label {
+  font-size: 13px;
+}
+
+.base-textarea__element::placeholder,
+.base-textarea__element {
+  font-weight: 500;
+}
+
+.base-textarea__label {
+  text-align: left;
+  font-weight: bold;
+  color: var(--color-medium-grey);
+}
+
+.base-textarea__content {
+  border-radius: 4px;
+  border: 1px solid var(--color-medium-grey-o-25);
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  padding: 9px 16px;
+}
+
+.base-textarea__element {
+  border: none;
+  color: var(--color-black);
+  margin: 2px;
+  outline: none;
+  padding: 0;
+  width: 100%;
+  resize: vertical;
+  min-height: 112px;
+  line-height: 1.5;
+}
+
+.base-textarea__element::placeholder {
+  color: var(--color-medium-grey);
+}
+
+.base-textarea__content:hover,
+.base-textarea--focused .base-textarea__content {
+  border-color: var(--color-main-purple);
+}
