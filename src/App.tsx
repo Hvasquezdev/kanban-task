@@ -32,7 +32,7 @@ function App() {
   return (
     <div>
       <BaseMenu className="menu-preview" options={menuOptions} />
-      <BaseSelect options={options} value={option} onSelect={setOption} />
+      <BaseSelect options={options} value={option} onSelect={setOption} label="Label Test" />
       <BaseCheckbox value={isChecked} label="Hovered" onChange={setIsChecked} />
 
       <form>

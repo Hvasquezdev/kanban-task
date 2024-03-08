@@ -77,3 +77,13 @@
   background-color: var(--color-main-purple-o-25);
   color: var(--color-black);
 }
+.base-select-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.base-select-container .base-select-container__label {
+  color: var(--color-medium-grey);
+  font-size: 12px;
+  font-weight: bold;
+}
