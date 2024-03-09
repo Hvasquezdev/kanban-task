@@ -7,6 +7,7 @@
   outline: none;
   padding: 0;
   text-align: center;
+  border: 1px solid transparent;
 }
 
 .base-button:disabled {
@@ -37,31 +38,78 @@
   border-radius: 24px;
 }
 
-.base-button--primary {
+.base-button--primary.base-button--contained {
   background-color: var(--color-main-purple);
   color: var(--color-white);
 }
 
-.base-button--primary:hover:not(:disabled) {
+.base-button--primary.base-button--contained:hover:not(:disabled) {
   background-color: var(--color-main-purple-hover);
 }
 
-.base-button--secondary {
+.base-button--primary.base-button--text,
+.base-button--primary.base-button--outlined {
+  background-color: transparent;
+  color: var(--color-main-purple);
+}
+
+.base-button--primary.base-button--text:hover:not(:disabled),
+.base-button--primary.base-button--outlined:hover:not(:disabled) {
+  background-color: var(--color-main-purple-hover);
+  color: var(--color-white);
+}
+
+.base-button--primary.base-button--outlined {
+  border-color: var(--color-main-purple);
+}
+
+.base-button--secondary.base-button--contained {
   background-color: var(--color-main-purple-o-10);
   color: var(--color-main-purple);
 }
 
-.base-button--secondary:hover:not(:disabled) {
+.base-button--secondary.base-button--contained:hover:not(:disabled) {
   background-color: var(--color-main-purple-o-25);
 }
 
-.base-button--destructive {
+.base-button--secondary.base-button--text,
+.base-button--secondary.base-button--outlined {
+  background-color: transparent;
+  color: var(--color-main-purple);
+}
+
+.base-button--secondary.base-button--text:hover:not(:disabled),
+.base-button--secondary.base-button--outlined:hover:not(:disabled) {
+  background-color: var(--color-main-purple-o-25);
+}
+
+.base-button--secondary.base-button--outlined {
+  border-color: var(--color-main-purple);
+}
+
+.base-button--destructive.base-button--contained {
   background-color: var(--color-red);
   color: var(--color-white);
 }
 
-.base-button--destructive:hover:not(:disabled) {
+.base-button--destructive.base-button--contained:hover:not(:disabled) {
   background-color: var(--color-red-hover);
+}
+
+.base-button--destructive.base-button--text,
+.base-button--destructive.base-button--outlined {
+  background-color: transparent;
+  color: var(--color-red);
+}
+
+.base-button--destructive.base-button--text:hover:not(:disabled),
+.base-button--destructive.base-button--outlined:hover:not(:disabled) {
+  background-color: var(--color-red-hover);
+  color: var(--color-white);
+}
+
+.base-button--destructive.base-button--outlined {
+  border-color: var(--color-red);
 }
 
 .base-button__loader {
