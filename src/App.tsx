@@ -55,6 +55,16 @@ function App() {
         <p>Modal Content</p>
       </BaseModal>
       <BaseButton onClick={() => setIsOpen(!isOpen)}>Open Test Modal</BaseButton>
+
+      <BaseButton variant="contained" color="destructive">
+        Contained
+      </BaseButton>
+      <BaseButton variant="text" color="destructive">
+        Text
+      </BaseButton>
+      <BaseButton variant="outlined" color="destructive">
+        Outlined
+      </BaseButton>
     </div>
   );
 }

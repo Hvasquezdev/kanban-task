@@ -5,6 +5,7 @@ import './BaseButton.css';
 type BaseButtonColor = 'primary' | 'secondary' | 'destructive';
 type BaseButtonSize = 'lg' | 'sm';
 type BaseButtonType = 'submit' | 'reset' | 'button';
+type BaseButtonVariant = 'contained' | 'text' | 'outlined';
 
 interface BaseButtonProps {
   children?: React.ReactNode;
@@ -16,6 +17,7 @@ interface BaseButtonProps {
   onClick?(): void;
   size?: BaseButtonSize;
   type?: BaseButtonType;
+  variant?: BaseButtonVariant;
 }
 
 export default function BaseButton({
@@ -27,6 +29,7 @@ export default function BaseButton({
   loading = false,
   size = 'lg',
   type = 'button',
+  variant = 'contained',
   onClick
 }: BaseButtonProps) {
   const computedClassNames = computeClassNames({
@@ -35,6 +38,7 @@ export default function BaseButton({
     'base-button--loading': loading,
     [`base-button--${color}`]: color,
     [`base-button--${size}`]: size,
+    [`base-button--${variant}`]: variant,
     [className as string]: className
   });
 
