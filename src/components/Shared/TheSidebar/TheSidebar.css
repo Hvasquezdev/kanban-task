@@ -1,0 +1,110 @@
+.the-sidebar-wrapper {
+  position: fixed;
+  width: 100vw;
+  height: calc(100vh - 65px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  left: 0;
+  top: 65px;
+}
+
+.the-sidebar-backdrop {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-black);
+  opacity: 0.5;
+}
+
+.the-sidebar {
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  position: relative;
+  left: unset;
+  height: auto;
+  width: auto;
+  z-index: 10;
+  top: 16px;
+  border-radius: 8px;
+}
+
+.the-sidebar .the-sidebar__logo {
+  margin: 32px auto 54px 26px;
+  object-fit: contain;
+}
+
+.board-list {
+  display: flex;
+  flex-direction: column;
+  padding-right: 24px;
+}
+
+.board-list .board-list__title {
+  margin-left: 24px;
+  margin-bottom: 20px;
+  line-height: auto;
+  letter-spacing: 2.4px;
+  color: var(--color-medium-grey);
+  text-align: left;
+}
+
+.board-list .board-list__boards {
+  display: flex;
+  flex-direction: column;
+}
+
+.board-list .board-list__boards .board-item:last-child {
+  color: var(--color-main-purple);
+  fill: var(--color-main-purple);
+}
+
+.the-sidebar .the-sidebar__footer {
+  display: none;
+  margin-top: auto;
+  padding-bottom: 32px;
+  padding-right: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .the-sidebar .the-sidebar__footer {
+    display: flex;
+  }
+
+  .the-sidebar-wrapper {
+    position: unset;
+    width: auto;
+    height: auto;
+    display: unset;
+    align-items: unset;
+    justify-content: unset;
+    left: unset;
+    top: unset;
+  }
+
+  .the-sidebar-backdrop {
+    display: none;
+  }
+
+  .the-sidebar {
+    padding-top: 19px;
+    padding-bottom: 0;
+    border-right: 1px solid var(--color-lines-light);
+    width: 260px;
+    position: absolute;
+    height: calc(100vh - 96px);
+    top: 96px;
+    left: 0;
+    border-radius: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .the-sidebar {
+    width: 300px;
+  }
+}

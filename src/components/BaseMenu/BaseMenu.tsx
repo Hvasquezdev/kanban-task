@@ -1,8 +1,8 @@
 import { useRef, useState } from 'react';
 import BaseButton from '../BaseButton';
-import iconMenu from '../../assets/icon-vertical-ellipsis.svg';
-import './BaseMenu.css';
+import iconMenu from '../../assets/images/svg/icon-vertical-ellipsis.svg';
 import useClickOutside from '../../hooks/useClickOutside';
+import './BaseMenu.css';
 
 export enum MenuOptionColor {
   Default = 'default',
