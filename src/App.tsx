@@ -5,11 +5,16 @@ import BaseTextField from './components/BaseTextField';
 import BaseMenu from './components/BaseMenu';
 import { MenuOptionColor } from './components/BaseMenu/BaseMenu';
 import BaseCheckbox from './components/BaseCheckbox';
+import BaseModal from './components/BaseModal';
+import BaseButton from './components/BaseButton';
+import BaseTextarea from './components/BaseTextarea';
 
 function App() {
   const [option, setOption] = useState<Option>();
   const [text, setText] = useState('');
+  const [description, setDescription] = useState('');
   const [isChecked, setIsChecked] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const options = [
     { value: 'chocolate', label: 'Chocolate' },
@@ -30,15 +35,36 @@ function App() {
   ];
 
   return (
-    <div>
+    <div style={{ padding: 16 }}>
       <BaseMenu className="menu-preview" options={menuOptions} />
-      <BaseSelect options={options} value={option} onSelect={setOption} />
+      <BaseSelect options={options} value={option} onSelect={setOption} label="Label Test" />
       <BaseCheckbox value={isChecked} label="Hovered" onChange={setIsChecked} />
 
-      <form>
+      <form style={{ display: 'flex', gap: '16px', flexDirection: 'column', maxWidth: '640px' }}>
         <BaseTextField onChange={setText} value={text} label="Text Field" required placeholder="e.g Make cofee" />
+
+        <BaseTextarea
+          onChange={setDescription}
+          value={description}
+          label="Description"
+          placeholder="e.g. It’s always good to take a break. This 15 minute break will recharge the batteries a little."
+        />
         <button type="submit">Submit</button>
       </form>
+      <BaseModal isOpen={isOpen} renderHeader={() => <h1>Header Testing</h1>} onClose={setIsOpen}>
+        <p>Modal Content</p>
+      </BaseModal>
+      <BaseButton onClick={() => setIsOpen(!isOpen)}>Open Test Modal</BaseButton>
+
+      <BaseButton variant="contained" color="destructive">
+        Contained
+      </BaseButton>
+      <BaseButton variant="text" color="destructive">
+        Text
+      </BaseButton>
+      <BaseButton variant="outlined" color="destructive">
+        Outlined
+      </BaseButton>
     </div>
   );
 }
