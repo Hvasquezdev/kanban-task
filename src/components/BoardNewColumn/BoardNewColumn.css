@@ -1,0 +1,19 @@
+.board-new-column {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-cloud-gray);
+
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  padding: 1rem;
+}
+.board-new-column .board-new-column__label {
+  color: var(--color-medium-grey);
+}
+.board-new-column:hover .board-new-column__label {
+  transition: 0.3s ease;
+  color: var(--color-main-purple);
+}
