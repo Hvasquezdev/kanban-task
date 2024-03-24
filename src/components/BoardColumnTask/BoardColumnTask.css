@@ -1,0 +1,8 @@
+.board-column-task__name {
+  color: var(--color-black);
+}
+
+.board-column-task__subtask {
+  color: var(--color-medium-grey);
+  margin-top: 0.5rem;
+}
